@@ -1,4 +1,5 @@
-# Takes 2 natural numbers a,b and computes gcd(a,b)
+# Takes 2 natural numbers a and b and
+# computes integers q and r st a = qb * r and 0 <= r < b.
 
 def dwr(a, b):
     # Takes natural numb a and b, returns (q,r) such that
@@ -17,7 +18,8 @@ def dwr(a, b):
 
 a = 1
 b = 1
-print("Enter 2 natural numbers greater than 1.")
+
+print("Enter natural numbers a and b, a > b.")
 while (a < 2):
     a = input("a =  ")
     a = int(a)
@@ -26,20 +28,6 @@ while (b < 2):
     b = input("b =  ")
     b = int(b)
 
-x = max(a,b)
-y = min(a,b)
-(q,r) = dwr(x,y)
-temp_r = 0
+(q,r) = dwr(a,b)
 
-while(r > 1):
-    last_r = r
-    x = y
-    y = r
-    (q,r) = dwr(x,y)
-
-if(r == 0):
-    g = last_r
-else:
-    g = 1
-
-print("gcd({}, {}) = {}.".format(a,b,g))
+print("{} = {} * {} + {}".format(a,q,b,r))
