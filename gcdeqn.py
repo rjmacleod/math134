@@ -2,7 +2,7 @@
 # where u,v are integers, u > 0 and u is smallest possible
 # int satisfying this.
 
-# ref. An Intro. to Math. Crypt., 2nd ed, Hoffstein p50
+# ref: An Intro. to Math. Crypt., 2nd ed, Hoffstein p.50
 
 def dwr(a, b):
     # Takes natural numb a and b, returns (q,r) such that
